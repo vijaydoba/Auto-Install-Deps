@@ -1,0 +1,38 @@
+{
+  "name": "auto-install-deps",
+  "displayName": "Auto Install Deps",
+  "description": "Detect missing Node.js dependencies and install them with one click.",
+  "version": "0.0.1",
+  "publisher": "vijaydoba",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "auto-install-deps.installDependency",
+        "title": "Auto Install Deps: Install Dependency"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.6.0"
+  }
+}
