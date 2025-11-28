@@ -1,8 +1,8 @@
 {
   "name": "auto-install-deps",
   "displayName": "Auto Install Deps",
-  "description": "Detect missing Node.js dependencies and install them with one click.",
-  "version": "0.0.1",
+  "description": "Detect missing dependencies for multiple languages and install them with one click.",
+  "version": "0.1.1",
   "publisher": "vijaydoba",
   "engines": {
     "vscode": "^1.96.0"
@@ -10,12 +10,31 @@
   "categories": [
     "Other"
   ],
+  "icon": "images/icon.png", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vijaydoba/Auto-Install-Deps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vijaydoba/Auto-Install-Deps/issues"
+  },
+  "homepage": "https://github.com/vijaydoba/Auto-Install-Deps",
+  "license": "MIT",
   "main": "./dist/extension.js",
   "activationEvents": [
+    "onStartupFinished",
     "onLanguage:javascript",
     "onLanguage:javascriptreact",
     "onLanguage:typescript",
-    "onLanguage:typescriptreact"
+    "onLanguage:typescriptreact",
+    "onLanguage:python",
+    "onLanguage:java",
+    "onLanguage:csharp",
+    "onLanguage:php",
+    "onLanguage:go",
+    "onLanguage:rust",
+    "onLanguage:ruby",
+    "onLanguage:dart"
   ],
   "contributes": {
     "commands": [
